@@ -1,7 +1,14 @@
-﻿
+﻿@model List<BookStore.Models.Book>
 @{
     ViewBag.Title = "title";
     Layout = null;
 }
 
 <h2>Hello there</h2>
+
+@foreach (var p in @Model)
+{
+    <div>
+        <h3>@p.Name</h3>
+    </div>
+}
