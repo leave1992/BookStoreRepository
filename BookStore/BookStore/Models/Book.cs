@@ -13,5 +13,6 @@ namespace BookStore.Models
         public string Description { get; set; }
         public string Genre { get; set; }
         public decimal Price { get; set; }
+        public Image BookCover { get; set; }
     }
 }
