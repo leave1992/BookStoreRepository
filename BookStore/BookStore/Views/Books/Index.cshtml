@@ -1,7 +1,18 @@
-﻿
+﻿@model List<BookStore.Models.Book>
 @{
     ViewBag.Title = "title";
     Layout = null;
 }
+<div>
+    @foreach (var book in @Model)
+    {
+        <div>
+            <h4>@book.Name</h4>
 
-<h2>Hello there</h2>
+            <img src="@Url.Content(@book.BookCover.Path)" alt="Image" width="250" height="350" />
+
+            <h4>@book.Genre</h4>
+            <h4>@book.Price.ToString("# $")</h4>
+        </div>
+    }
+</div>
