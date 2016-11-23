@@ -3,16 +3,22 @@
     ViewBag.Title = "title";
     Layout = null;
 }
-<div>
-    @foreach (var book in @Model)
-    {
-        <div>
-            <h4>@book.Name</h4>
+<head>
+    <link href="~/Content/Styles/Main.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="content">
+        @foreach (var book in @Model)
+        {
+            <div class="book">
+                <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
+                    <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
+                </a>
+                <div class="desc">
+                <p class="cut-name">@book.Name</p>
+                <p class="cut-genre">@book.Genre</p></div>
+            </div>
+        }
+    </div>
+</body>
 
-            <img src="@Url.Content(@book.BookCover.Path)" alt="Image" width="250" height="350" />
-
-            <h4>@book.Genre</h4>
-            <h4>@book.Price.ToString("# $")</h4>
-        </div>
-    }
-</div>

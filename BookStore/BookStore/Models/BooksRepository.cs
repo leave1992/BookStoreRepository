@@ -11,7 +11,7 @@ namespace BookStore.Models
         {
             var books = new List<Book>
             {
-                new Book { Name = "Harry Potter and the Philosopher's Stone", Author = "J. K. Rowling", Price = 25, Genre = "Fantasy", BookCover = new Image {Path = "~/Resources/Images/harry-potter1.png"} },
+                new Book { Name = "Harry Potter and the Philosopher's Stone", Author = "J. K. Rowling", Price = 25, Genre = "Fantasy", BookCover = new Image {Path = "~/Resources/Images/harry_potter1.png"} },
                 new Book { Name = "Harry Potter and the Chamber of Secrets", Author = "J. K. Rowling", Price = 25, Genre = "Fantasy", BookCover = null },
                 new Book { Name = "Harry Potter and the Prisoner of Azkaban", Author = "J. K. Rowling", Price = 30, Genre = "Fantasy", BookCover = null },
                 new Book { Name = "Harry Potter and the Goblet of Fire", Author = "J. K. Rowling", Price = 30, Genre = "Fantasy", BookCover = null },

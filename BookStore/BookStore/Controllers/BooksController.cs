@@ -23,7 +23,7 @@ namespace BookStore.Controllers
                 {
                     book.BookCover = new Image
                     {
-                        Path = "http://craigmod.com/images/journal/coccyx/aba-04.png"
+                        Path = "http://www.ellf.ru/uploads/posts/2010-03/1269460367_beautiful-book-covers-39.png"
                     };
                 }
             }
