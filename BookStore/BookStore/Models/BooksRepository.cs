@@ -7,7 +7,7 @@ namespace BookStore.Models
 {
     public class BooksRepository : IBooksRepository
     {
-        public List<Book> GetBooks()
+        public IEnumerable<Book> GetBooks()
         {
             var books = new List<Book>
             {

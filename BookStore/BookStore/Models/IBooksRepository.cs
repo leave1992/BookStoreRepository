@@ -8,6 +8,6 @@ namespace BookStore.Models
 {
     public interface IBooksRepository
     {
-        List<Book> GetBooks();
+        IEnumerable<Book> GetBooks();
     }
 }
