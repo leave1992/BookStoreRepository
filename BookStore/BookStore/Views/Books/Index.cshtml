@@ -7,18 +7,31 @@
     <link href="~/Content/Styles/Main.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-    <div class="content">
-        @foreach (var book in @Model)
-        {
-            <div class="book">
-                <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
-                    <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
-                </a>
-                <div class="desc">
-                <p class="cut-name">@book.Name</p>
-                <p class="cut-genre">@book.Genre</p></div>
-            </div>
-        }
-    </div>
+        <div class="header">
+        <div class="nav">
+            <a href="#" class="logo"><img src="~/Resources/Images/logo.png"></a>
+            <p class="menu">
+                <ul>
+                    <li><a href="#books">BOOKS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
+            </p>
+        </div>
+        </div>
+        <div class="content">
+            @foreach (var book in @Model)
+            {
+                <div class="book">
+                    <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
+                        <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
+                    </a>
+                    <div class="desc">
+                        <p class="desc-title">@book.Name</p>
+                        <p class="desc-genre">@book.Genre</p>
+                    </div>
+                </div>
+            }
+        </div>
 </body>
 
