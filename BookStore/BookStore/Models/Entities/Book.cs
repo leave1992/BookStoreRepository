@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BookStore.Models
+namespace BookStore.Models.Entities
 {
+    [Table("Books")]
     public class Book
     {
+        [Key]
         public int BookId { get; set; }
         public string Name { get; set; }
         public string Author { get; set; }
