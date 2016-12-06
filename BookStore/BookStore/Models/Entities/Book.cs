@@ -8,6 +8,7 @@ namespace BookStore.Models.Entities
     {
         [Key]
         public int BookId { get; set; }
+        [Required]
         public string Name { get; set; }
         public string Author { get; set; }
         public string Description { get; set; }

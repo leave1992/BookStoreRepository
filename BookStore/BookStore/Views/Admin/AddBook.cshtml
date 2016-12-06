@@ -1,0 +1,85 @@
+﻿@model BookStore.Models.Entities.Book
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    
+    
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+        
+        <div>
+            <h4>Add Book</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new {})
+            <div>
+                @Html.LabelFor(model => model.Name, htmlAttributes: new {})
+                <div>
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new {} })
+                    @Html.ValidationMessageFor(model => model.Name, "", new {})
+                </div>
+            </div>
+    
+            <div>
+                @Html.LabelFor(model => model.Author, htmlAttributes: new {})
+                <div>
+                    @Html.EditorFor(model => model.Author, new { htmlAttributes = new {} })
+                    @Html.ValidationMessageFor(model => model.Author, "", new {})
+                </div>
+            </div>
+    
+            <div>
+                @Html.LabelFor(model => model.Description, htmlAttributes: new {})
+                <div>
+                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new {} })
+                    @Html.ValidationMessageFor(model => model.Description, "", new {})
+                </div>
+            </div>
+    
+            <div>
+                @Html.LabelFor(model => model.Genre, htmlAttributes: new {})
+                <div>
+                    @Html.EditorFor(model => model.Genre, new { htmlAttributes = new {} })
+                    @Html.ValidationMessageFor(model => model.Genre, "", new {})
+                </div>
+            </div>
+    
+            <div>
+                @Html.LabelFor(model => model.Price, htmlAttributes: new {})
+                <div>
+                    @Html.EditorFor(model => model.Price, new { htmlAttributes = new {} })
+                    @Html.ValidationMessageFor(model => model.Price, "", new {})
+                </div>
+            </div>
+    
+            <div>
+                @Html.LabelFor(model => model.BookCover, htmlAttributes: new {})
+                <div>
+                    @Html.EditorFor(model => model.BookCover, new { htmlAttributes = new { } })
+                    @Html.ValidationMessageFor(model => model.BookCover, "", new {})
+                </div>
+            </div>
+    
+            <div>
+                <div>
+                    <input type="submit" value="Create"/>
+                </div>
+            </div>
+        </div>
+    }
+    
+</body>
+</html>
