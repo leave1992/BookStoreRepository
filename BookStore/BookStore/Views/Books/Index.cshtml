@@ -9,17 +9,29 @@
 <body>
         <div class="header">
         <div class="nav">
-            <a href="#" class="logo"><img src="~/Resources/Images/logo.png"></a>
-            <p class="menu">
-                <ul>
-                    <li><a href="#books">BOOKS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                </ul>
-            </p>
-        </div>
+        
+            <ul class="login">
+                <li><a href="#login">LOGIN</a></li>
+                <li><a href="#singup">SING UP</a></li>
+            </ul>
+            <frame><input type="text" name="search" ></frame>
+                <a href="#" class="logo"><img src="~/Resources/Images/logo.png"></a>
+                <p class="menu">
+                    <ul>
+                        <li><a href="#books">BOOKS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                    </ul>
+                </p>
+</div>
         </div>
         <div class="content">
+
+            @*<div class="recommendet">
+                <h3>RECOMMENDET</h3>
+                <a href="#"><img class="r_book" src="~/Resources/Images/harry_potter1.png" width="150" height="200" /></a>
+            </div>*@
+
             @foreach (var book in @Model)
             {
                 <div class="book">
@@ -32,6 +44,9 @@
                     </div>
                 </div>
             }
+
         </div>
+
+
 </body>
 

@@ -17,9 +17,13 @@ nav{
     float:left; 
     margin-top:4px; 
     margin-left:20px; 
-
+    margin-right:20px;
 }
 
+.login{
+    float:right;
+    margin-right:20px;
+}
 .header {
     width:100%;
     height:47px;
@@ -54,6 +58,28 @@ li a:hover {
     background-color: #111;
 }
 
+input[type=text] {
+    margin-top:6px;
+    margin-right:4px;
+    width: 36px;
+    height:36px;
+    float:right;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #333;
+    background-image: url('/Resources/Images/searchicon.png');
+    background-position: 9px 9px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 0px;
+    transition: width 0.3s ease-in-out;
+
+}
+
+input[type=text]:focus {
+    width: 61%;
+}
+
 .content {
     margin: auto;
     padding: 20px;
@@ -67,22 +93,22 @@ li a:hover {
     border: 1px solid #ccc;
     float: left;
     width: 150px;
+    box-shadow: 4px 4px 10px #333;
 }
 
-    .book:hover {
+.book:hover {
         border: 1px solid #777;
-    }
+}
 
-    .book img {
+.book img {
         width: 150px;
         height: 200px;
-    }
+}
 
 .desc {
     width: 100%;
     height: 60px;
     text-align: left;
-    
 }
 
 .desc-title {
@@ -93,7 +119,10 @@ li a:hover {
     max-height: 32px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    font: bold 10px verdana, sans-serif;
+    font: bold 12px Helvetica, sans-serif;
+    margin-left:4px;
+    margin-right:2px;
+    margin-top:6px;
 }
 
 .desc-genre {
@@ -104,5 +133,24 @@ li a:hover {
     max-height: 32px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    font: 10px verdana, sans-serif;
+    font: 10px Helvetica, sans-serif;
+    margin-left:4px;
+    margin-top:-4px;
 }
+
+/*.recommendet {
+    opacity: 0.5;
+    height: 300px;
+    width:100%;
+    background-color: #0F8DE8;
+    
+}
+
+.r_book{
+    margin-left:20px;
+
+}
+
+r_book h3{
+    margin-left:20px;
+}*/

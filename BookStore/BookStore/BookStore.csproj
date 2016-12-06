@@ -93,6 +93,7 @@
     <Content Include="Global.asax" />
     <Content Include="Resources\Images\harry_potter1.png" />
     <Content Include="Resources\Images\logo.png" />
+    <Content Include="Resources\Images\searchicon.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
