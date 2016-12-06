@@ -97,14 +97,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Content Include="Content\Styles\Main.css" />
-=======
     <Content Include="App_Data\BooksStoreDBContext.mdf" />
     <Content Include="App_Data\BooksStoreDBContext_log.ldf">
       <DependentUpon>BooksStoreDBContext.mdf</DependentUpon>
     </Content>
->>>>>>> BookPageLogic
     <Content Include="Global.asax" />
     <Content Include="Resources\Images\harry_potter1.png" />
     <Content Include="Resources\Images\logo.png" />
