@@ -11,12 +11,18 @@ namespace BookStore.Controllers
 {
     public class AdminController : Controller
     {
-        private BooksStoreContext _context = new BooksStoreContext();
+        private IBooksRepository _booksRepository;
+
+        public AdminController()
+        {
+            _booksRepository = new BooksRepository();
+        }
 
         [HttpGet]
         public ActionResult AllBooks()
         {
-            return View(_context.Books.ToList());
+            var books = _booksRepository.GetBooks();
+            return View(books);
         }
 
         [HttpGet]
@@ -31,9 +37,9 @@ namespace BookStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Books.Add(book);
-                _context.SaveChanges();
-                return RedirectToAction("Index", "Books");
+                _booksRepository.AddBook(book);
+                _booksRepository.Save();
+                return RedirectToAction("Home", "Books");
             }
             return View(book);
         }
@@ -43,7 +49,7 @@ namespace BookStore.Controllers
         {
             int intId;
             int.TryParse(id, out intId);
-            Book book = _context.Books.Find(intId);
+            var book = _booksRepository.GetBookById(intId);
             if (book == null)
             {
                 return HttpNotFound();
@@ -57,9 +63,9 @@ namespace BookStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Entry(book).State = EntityState.Modified;
-                _context.SaveChanges();
-                return RedirectToAction("Index", "Books");
+                _booksRepository.UpdateBook(book);
+                _booksRepository.Save();
+                return RedirectToAction("Home", "Books");
             }
             return View(book);
         }
@@ -69,7 +75,7 @@ namespace BookStore.Controllers
         {
             int intId;
             int.TryParse(id, out intId);
-            Book book = _context.Books.Find(intId);
+            var book = _booksRepository.GetBookById(intId);
             if (book == null)
             {
                 return HttpNotFound();
@@ -83,16 +89,10 @@ namespace BookStore.Controllers
         {
             int intId;
             int.TryParse(id, out intId);
-            Book book = _context.Books.Find(intId);
-            _context.Books.Remove(book);
-            _context.SaveChanges();
-            return RedirectToAction("Index", "Books");
-        }
+            _booksRepository.DeleteBook(intId);
+            _booksRepository.Save();
 
-        protected override void Dispose(bool disposing)
-        {
-            _context.Dispose();
-            base.Dispose(disposing);
+            return RedirectToAction("Home", "Books");
         }
 
     }

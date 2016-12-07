@@ -10,5 +10,10 @@ namespace BookStore.Models
     public interface IBooksRepository
     {
         IEnumerable<Book> GetBooks();
+        Book GetBookById(int id);
+        void AddBook(Book book);
+        void DeleteBook(int id);
+        void UpdateBook(Book book);
+        void Save();
     }
 }

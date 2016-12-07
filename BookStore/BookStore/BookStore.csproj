@@ -139,7 +139,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Books\Index.cshtml" />
+    <Content Include="Views\Books\Home.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Admin\AddBook.cshtml" />
     <Content Include="Views\Admin\EditBook.cshtml" />
