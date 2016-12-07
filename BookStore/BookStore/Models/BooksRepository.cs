@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using BookStore.Models.Entities;
 
 namespace BookStore.Models
 {
-    public class BooksRepository : IBooksRepository
+    public class BooksRepository : IBooksRepository, IDisposable
     {
         private readonly BooksStoreContext _context = new BooksStoreContext();
+        private bool _disposed = false;
+
         public IEnumerable<Book> GetBooks()
         {
             //var books = new List<Book>
@@ -32,7 +35,51 @@ namespace BookStore.Models
             //    //new Book { Name = "Star Wars: Episode VII - The Force Awakens", Author = "George Lucas", Price = 50, Genre = "Action, Adventure, Fantasy" , BookCover = null}
             //};
 
-            return _context.Books;
+            return _context.Books.ToList();
+        }
+
+        public Book GetBookById(int id)
+        {
+            return _context.Books.Find(id);
+        }
+
+        public void AddBook(Book book)
+        {
+            _context.Books.Add(book);
+        }
+
+        public void DeleteBook(int id)
+        {
+            Book book = _context.Books.Find(id);
+            _context.Books.Remove(book);
+        }
+
+        public void UpdateBook(Book book)
+        {
+            _context.Entry(book).State = EntityState.Modified;
+        }
+
+        public void Save()
+        {
+            _context.SaveChanges();
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this._disposed)
+            {
+                if (disposing)
+                {
+                    _context.Dispose();
+                }
+            }
+            this._disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     } 
 }
