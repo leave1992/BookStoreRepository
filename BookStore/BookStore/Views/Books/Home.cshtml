@@ -25,26 +25,33 @@
             </p>
         </div>
     </div>
-    <div class="content">
+    <div class="page-wrap">
+        <div class="content">
 
-        @*<div class="recommendet">
-                <h3>RECOMMENDET</h3>
-                <a href="#"><img class="r_book" src="~/Resources/Images/harry_potter1.png" width="150" height="200" /></a>
-            </div>*@
-
-        @foreach (var book in @Model)
+            @foreach (var book in @Model)
             {
-            <div class="book">
-                <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
-                    <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
-                </a>
-                <div class="desc">
-                    <p class="desc-title">@book.Title</p>
-                    <p class="desc-genre">@book.Genre</p>
+                <div class="book">
+                    <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
+                        <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
+                    </a>
+                    <div class="desc">
+                        <p class="desc-title">@book.Title</p>
+                        <p class="desc-genre">@book.Genre</p>
+                    </div>
                 </div>
-            </div>
-        }
+            }
 
-    </div>
+        </div>
+        </div>
+    <footer class="site-footer">
+        <div class="social">
+            <ul class="social_bookmarks">
+                <li class='rss'><a class='ie6fix' href="#">RSS</a></li>
+                <li class='facebook'><a class='ie6fix' href='#'>Facebook</a></li>
+                <li class='twitter'><a class='ie6fix' href='#'>Twitter</a></li>
+            </ul>
+        </div>
+        <p class="copyright">© 2K16 y.; <a href="#">Ratio.com.ua</a> Books store.</p>
+    </footer>
 </body>
 

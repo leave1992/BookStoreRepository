@@ -1,5 +1,5 @@
 ﻿.body {
-    background-color: #F5F5F5;
+
 
 }
 
@@ -84,8 +84,7 @@ input[type=text]:focus {
     margin: auto;
     padding: 20px;
     width: 960px;
-    height: 1700px;
-    position: relative;
+    height:auto;
 }
 
 .book {
@@ -138,19 +137,55 @@ input[type=text]:focus {
     margin-top:-4px;
 }
 
-/*.recommendet {
-    opacity: 0.5;
-    height: 300px;
-    width:100%;
-    background-color: #0F8DE8;
-    
+/*.page-wrap {
+  min-height: 100%;
+  margin-bottom: -140px; 
 }
 
-.r_book{
-    margin-left:20px;
-
+.site-footer, .page-wrap:after {
+  height: 140px; 
+  padding:25px;
+  background-color:#252525; 
+  background-image: url(/Resources/Images/f_bg.png);
+  color:#fff;
 }
 
-r_book h3{
-    margin-left:20px;
+.social{
+    width:141px;
+    height:50px;
+    margin:auto;
+}
+
+.social_bookmarks{
+border:medium none;
+display:block;
+list-style-type: none;
+list-style-position: outside;
+}
+
+.social_bookmarks li {
+margin:0 7px 0 0;
+width:40px;
+}
+
+.social_bookmarks li a {
+display:block;
+height:32px;
+padding:0;
+text-indent:-9999px;
+width:32px;
+outline: none;
+}
+
+.social_bookmarks .rss a{background: transparent url(/Resources/Images/facebook.png) 0 0  no-repeat;}
+.social_bookmarks .facebook a{background: transparent url(/Resources/Images/instagram.png) 0 0  no-repeat;}
+.social_bookmarks .twitter a{background: transparent url(/Resources/Images/twitter.png) 0 0  no-repeat;}
+
+.copyright{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    opacity: 0.7;
 }*/

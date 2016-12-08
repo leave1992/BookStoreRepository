@@ -97,16 +97,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Styles\css.css" />
     <Content Include="Content\Styles\Main.css" />
     <Content Include="App_Data\BooksStoreDBContext.mdf" />
     <Content Include="App_Data\BooksStoreDBContext_log.ldf">
       <DependentUpon>BooksStoreDBContext.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="Resources\Images\facebook.png" />
+    <Content Include="Resources\Images\f_bg.png" />
     <Content Include="Resources\Images\harry_potter1.png" />
+    <Content Include="Resources\Images\instagram.png" />
     <Content Include="Resources\Images\logo.png" />
     <Content Include="Resources\Images\searchicon.png" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
+    <Content Include="Resources\Images\twitter.png" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -145,6 +150,8 @@
     <Content Include="Views\Admin\EditBook.cshtml" />
     <Content Include="Views\Admin\DeleteBook.cshtml" />
     <Content Include="Views\Admin\AllBooks.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Books\View.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
