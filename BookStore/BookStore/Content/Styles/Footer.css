@@ -1,0 +1,44 @@
+﻿#footer {
+    height: 150px;
+    background-color: #333;
+}
+
+.social{
+    width:141px;
+    height:50px;
+    margin:auto;
+}
+
+.social_bookmarks{
+border:medium none;
+display:block;
+list-style-type: none;
+list-style-position: outside;
+}
+
+.social_bookmarks li {
+margin:20px 7px 0 0;
+width:40px;
+}
+
+.social_bookmarks li a {
+display:block;
+height:32px;
+padding:0;
+text-indent:-9999px;
+width:32px;
+outline: none;
+}
+
+.social_bookmarks .rss a{background: transparent url(/Resources/Images/facebook.png) 0 0  no-repeat;}
+.social_bookmarks .facebook a{background: transparent url(/Resources/Images/instagram.png) 0 0  no-repeat;}
+.social_bookmarks .twitter a{background: transparent url(/Resources/Images/twitter.png) 0 0  no-repeat;}
+
+.copyright{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    opacity: 0.7;
+}

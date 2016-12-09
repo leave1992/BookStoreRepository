@@ -1,57 +1,18 @@
 ﻿@model IEnumerable<BookStore.Models.Entities.Book>
 @{
-    ViewBag.Title = "title";
-    Layout = null;
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<head>
-    <link href="~/Content/Styles/Main.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
-    <div class="header">
-        <div class="nav">
 
-            <ul class="login">
-                <li><a href="#login">LOGIN</a></li>
-                <li><a href="#singup">SING UP</a></li>
-            </ul>
-            <input type="text" name="search">
-            <a href="#" class="logo"><img src="~/Resources/Images/logo.png"></a>
-            <p class="menu">
-                <ul>
-                    <li><a href="#books">BOOKS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                </ul>
-            </p>
+@foreach (var book in @Model)
+            {
+    <div class="book">
+        <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
+            <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
+        </a>
+        <div class="desc">
+            <p class="desc-title">@book.Title</p>
+            <p class="desc-genre">@book.Genre</p>
         </div>
     </div>
-    <div class="page-wrap">
-        <div class="content">
-
-            @foreach (var book in @Model)
-            {
-                <div class="book">
-                    <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
-                        <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
-                    </a>
-                    <div class="desc">
-                        <p class="desc-title">@book.Title</p>
-                        <p class="desc-genre">@book.Genre</p>
-                    </div>
-                </div>
-            }
-
-        </div>
-        </div>
-    <footer class="site-footer">
-        <div class="social">
-            <ul class="social_bookmarks">
-                <li class='rss'><a class='ie6fix' href="#">RSS</a></li>
-                <li class='facebook'><a class='ie6fix' href='#'>Facebook</a></li>
-                <li class='twitter'><a class='ie6fix' href='#'>Twitter</a></li>
-            </ul>
-        </div>
-        <p class="copyright">© 2K16 y.; <a href="#">Ratio.com.ua</a> Books store.</p>
-    </footer>
-</body>
-
+}

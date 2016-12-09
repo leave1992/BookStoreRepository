@@ -3,21 +3,42 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    @*<link href="~/Content/Styles/Main.css" type="text/css" rel="stylesheet" />*@
-    <link href="~/Content/Styles/css.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Styles/Home.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Styles/Layout.css" type="text/css" rel="stylesheet"/>
+    <link href="~/Content/Styles/Header.css" type="text/css" rel="stylesheet"/>
+    <link href="~/Content/Styles/Footer.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-
-
-    <div class="nav">
-        dsdasd
+    <div id="header">
+        <div class="nav">
+            <ul class="login">
+                <li><a href="#login">LOGIN</a></li>
+                <li><a href="#singup">SING UP</a></li>
+            </ul>
+            <input type="text" name="search">
+            <a href="#" class="logo"><img src="~/Resources/Images/logo.png"></a>
+            <p class="menu">
+                <ul>
+                    <li><a href="#books">BOOKS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
+            </p>
+        </div>
     </div>
-    <div class="content">
+    <div id="content">
         @RenderBody()
     </div>
-    <div class="footer">This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.</div>
-
-
+    <div id="spacer"></div>
+    <footer id="footer">
+        <div class="social">
+            <ul class="social_bookmarks">
+                <li class='rss'><a class='ie6fix' href="#">RSS</a></li>
+                <li class='facebook'><a class='ie6fix' href='#'>Facebook</a></li>
+                <li class='twitter'><a class='ie6fix' href='#'>Twitter</a></li>
+            </ul>
+        </div>
+        <p class="copyright">© @DateTime.Now.Year, Ratio Books Store.</p>
+    </footer>
 </body>
 </html>
