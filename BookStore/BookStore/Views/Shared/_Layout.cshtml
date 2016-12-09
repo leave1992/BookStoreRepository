@@ -10,33 +10,46 @@
 </head>
 <body>
     <div id="header">
-        <div class="nav">
-            <ul class="login">
-                <li><a href="#login">LOGIN</a></li>
-                <li><a href="#singup">SING UP</a></li>
-            </ul>
-            <input type="text" name="search">
+        <div class="header-bg">
             <a href="#" class="logo"><img src="~/Resources/Images/logo.png"></a>
-            <p class="menu">
+            <ul class="login">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sing Up</a></li>
+            </ul>
+            
+            <input type="text" name="search">
+
+            <nav role='navigation'>
                 <ul>
-                    <li><a href="#books">BOOKS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
-            </p>
+            </nav>  
         </div>
+
     </div>
     <div id="content">
         @RenderBody()
     </div>
     <div id="spacer"></div>
-    <footer id="footer">
+    <hr />
+    <footer class="footer">
+
         <div class="social">
-            <ul class="social_bookmarks">
-                <li class='rss'><a class='ie6fix' href="#">RSS</a></li>
-                <li class='facebook'><a class='ie6fix' href='#'>Facebook</a></li>
-                <li class='twitter'><a class='ie6fix' href='#'>Twitter</a></li>
-            </ul>
+            <a href=""><img src="~/Resources/Images/facebook.png" /></a>
+            <a href=""><img src="~/Resources/Images/instagram.png" /></a>
+            <a href=""><img src="~/Resources/Images/twitter.png" /></a>
+            
+            <p>
+                <a href="#">About Us</a>
+                <a href="#">Affiliates</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy</a>
+                <a href="#">Policy</a>
+                <a href="#">Terms of Service</a>
+           </p>
         </div>
         <p class="copyright">© @DateTime.Now.Year, Ratio Books Store.</p>
     </footer>
