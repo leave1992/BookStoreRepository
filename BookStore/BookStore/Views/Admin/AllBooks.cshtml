@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BookStore.Models.Entities.Book>
+﻿@model IEnumerable<BookStore.Migrations.Entities.Book>
 
     @{
         Layout = "~/Views/Shared/_Layout.cshtml";
@@ -33,7 +33,7 @@
                     @Html.DisplayNameFor(model => model.Price)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.BookCover)
+                    @Html.DisplayNameFor(model => model.Image.Path)
                 </th>
                 <th></th>
             </tr>
@@ -57,7 +57,7 @@
                         @Html.DisplayFor(modelItem => item.Price)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.BookCover)
+                        @Html.DisplayFor(modelItem => item.Image.Path)
                     </td>
                     <td>
                         @Html.ActionLink("Edit", "EditBook", new { id = item.BookId }) |

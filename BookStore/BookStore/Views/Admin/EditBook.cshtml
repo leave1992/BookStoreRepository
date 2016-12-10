@@ -1,4 +1,4 @@
-﻿@model BookStore.Models.Entities.Book
+﻿@model BookStore.Migrations.Entities.Book
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -68,10 +68,10 @@
             </div>
     
             <div>
-                @Html.LabelFor(model => model.BookCover, htmlAttributes: new {})
+                @Html.LabelFor(model => model.Image.Path, htmlAttributes: new {})
                 <div>
-                    @Html.EditorFor(model => model.BookCover, new { htmlAttributes = new {} })
-                    @Html.ValidationMessageFor(model => model.BookCover, "", new {})
+                    @Html.EditorFor(model => model.Image.Path, new { htmlAttributes = new {} })
+                    @Html.ValidationMessageFor(model => model.Image.Path, "", new {})
                 </div>
             </div>
             <hr />

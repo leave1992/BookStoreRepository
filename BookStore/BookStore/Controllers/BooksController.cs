@@ -22,12 +22,5 @@ namespace BookStore.Controllers
             var books = _booksRepository.GetBooks();
             return View(books);
         }
-
-        [HttpGet]
-        public ActionResult View()
-        {
-            var books = _booksRepository.GetBooks();
-            return View(books);
-        }
     }
 }

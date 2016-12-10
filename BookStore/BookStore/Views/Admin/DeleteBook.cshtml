@@ -1,4 +1,4 @@
-﻿@model BookStore.Models.Entities.Book
+﻿@model BookStore.Migrations.Entities.Book
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -58,11 +58,11 @@
             </dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.BookCover)
+                @Html.DisplayNameFor(model => model.Image.Path)
             </dt>
     
             <dd>
-                @Html.DisplayFor(model => model.BookCover)
+                @Html.DisplayFor(model => model.Image.Path)
             </dd>
     
         </dl>

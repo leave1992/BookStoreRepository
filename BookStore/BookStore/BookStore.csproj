@@ -131,11 +131,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Entities\Image.cs" />
     <Compile Include="Models\BooksStoreContext.cs" />
     <Compile Include="Migrations\Entities\Book.cs" />
     <Compile Include="Models\BooksRepository.cs" />
     <Compile Include="Models\IBooksRepository.cs" />
-    <Compile Include="Models\Image.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

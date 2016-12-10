@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BookStore.Models.Entities.Book>
+﻿@model IEnumerable<BookStore.Migrations.Entities.Book>
 @{
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,81 +7,9 @@
 @foreach (var book in @Model)
             {
     <div class="book">
-        <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
-            <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
-        </a>
-        <div class="desc">
-            <p class="desc-title">@book.Title</p>
-            <p class="desc-genre">@book.Genre</p>
-        </div>
-    </div>
-}
 
-@foreach (var book in @Model)
-            {
-    <div class="book">
-        <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
-            <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
-        </a>
-        <div class="desc">
-            <p class="desc-title">@book.Title</p>
-            <p class="desc-genre">@book.Genre</p>
-        </div>
-    </div>
-}
-@foreach (var book in @Model)
-            {
-    <div class="book">
-        <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
-            <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
-        </a>
-        <div class="desc">
-            <p class="desc-title">@book.Title</p>
-            <p class="desc-genre">@book.Genre</p>
-        </div>
-    </div>
-}
-@foreach (var book in @Model)
-            {
-    <div class="book">
-        <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
-            <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
-        </a>
-        <div class="desc">
-            <p class="desc-title">@book.Title</p>
-            <p class="desc-genre">@book.Genre</p>
-        </div>
-    </div>
-}
-@foreach (var book in @Model)
-            {
-    <div class="book">
-        <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
-            <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
-        </a>
-        <div class="desc">
-            <p class="desc-title">@book.Title</p>
-            <p class="desc-genre">@book.Genre</p>
-        </div>
-    </div>
-}
-@foreach (var book in @Model)
-            {
-    <div class="book">
-        <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
-            <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
-        </a>
-        <div class="desc">
-            <p class="desc-title">@book.Title</p>
-            <p class="desc-genre">@book.Genre</p>
-        </div>
-    </div>
-}
-@foreach (var book in @Model)
-            {
-    <div class="book">
-        <a target="_blank" href="@Url.Content(@book.BookCover.Path)">
-            <img src="@Url.Content(@book.BookCover.Path)" alt="Image">
+        <a target="_blank" href="@Url.Content(book.Image.Path)">
+            <img src="@Url.Content(book.Image.Path)" alt="Image">
         </a>
         <div class="desc">
             <p class="desc-title">@book.Title</p>

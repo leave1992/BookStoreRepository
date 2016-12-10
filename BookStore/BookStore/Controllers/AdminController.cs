@@ -4,8 +4,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BookStore.Migrations.Entities;
 using BookStore.Models;
-using BookStore.Models.Entities;
 
 namespace BookStore.Controllers
 {

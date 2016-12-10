@@ -1,4 +1,4 @@
-﻿@model BookStore.Models.Entities.Book
+﻿@model BookStore.Migrations.Entities.Book
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -17,7 +17,7 @@
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 
 
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("AddBook", "Admin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         @Html.AntiForgeryToken()
 
@@ -58,20 +58,21 @@
             </div>
 
             <div>
-                @Html.LabelFor(model => model.Price, htmlAttributes: new { })
+                @Html.LabelFor(model => model.Price, htmlAttributes: new {})
                 <div>
-                    @Html.EditorFor(model => model.Price, new { htmlAttributes = new { } })
-                    @Html.ValidationMessageFor(model => model.Price, "", new { })
+                    @Html.EditorFor(model => model.Price, new {htmlAttributes = new {}})
+                    @Html.ValidationMessageFor(model => model.Price, "", new {})
                 </div>
             </div>
 
             <div>
-                @Html.LabelFor(model => model.BookCover, htmlAttributes: new { })
-                <div>
-                    @Html.EditorFor(model => model.BookCover, new { htmlAttributes = new { } })
-                    @Html.ValidationMessageFor(model => model.BookCover, "", new { })
-                </div>
+                    @Html.LabelFor(model => model.Image.Path, htmlAttributes: new { })
+                    <div>
+                        @Html.EditorFor(model => model.Image.Path, new { htmlAttributes = new { } })
+                        @Html.ValidationMessageFor(model => model.Image.Path, "", new { })
+                    </div>
             </div>
+
             <hr />
             <div>
                 <div>

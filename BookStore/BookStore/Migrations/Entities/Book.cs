@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BookStore.Models.Entities
+namespace BookStore.Migrations.Entities
 {
     [Table("Books")]
     public class Book
@@ -18,6 +19,6 @@ namespace BookStore.Models.Entities
         public string Genre { get; set; }
         [Required, Range(1, 1000), DataType(DataType.Currency)]
         public decimal Price { get; set; }
-        public Image BookCover { get; set; }
+        public virtual Image Image { get; set; }
     }
 }
