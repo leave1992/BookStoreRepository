@@ -1,0 +1,37 @@
+﻿.footer {
+    height: 150px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    font: 10px verdana, sans-serif;
+
+}
+
+hr {
+    margin: 0;
+    border: none;
+    background-color: #008ae6;
+    height: 3px; 
+   }
+
+.social {
+    top: 20px;
+    width: 450px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+}
+
+
+.social a {
+    margin : 0px 10px 0px 0px;
+    text-decoration:none;
+    color: #fff;
+    font: 10px verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+.social p {
+    margin-top: 20px;
+}

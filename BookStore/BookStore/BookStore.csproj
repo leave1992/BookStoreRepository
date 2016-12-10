@@ -97,16 +97,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Styles\Main.css" />
+    <Content Include="Content\Styles\Footer.css" />
+    <Content Include="Content\Styles\Header.css" />
+    <Content Include="Content\Styles\Layout.css" />
+    <Content Include="Content\Styles\Home.css" />
     <Content Include="App_Data\BooksStoreDBContext.mdf" />
     <Content Include="App_Data\BooksStoreDBContext_log.ldf">
       <DependentUpon>BooksStoreDBContext.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="Resources\Images\facebook.png" />
+    <Content Include="Resources\Images\f_bg.png" />
     <Content Include="Resources\Images\harry_potter1.png" />
+    <Content Include="Resources\Images\instagram.png" />
     <Content Include="Resources\Images\logo.png" />
     <Content Include="Resources\Images\searchicon.png" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
+    <Content Include="Resources\Images\twitter.png" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -124,11 +131,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Entities\Image.cs" />
     <Compile Include="Models\BooksStoreContext.cs" />
-    <Compile Include="Models\Entities\Book.cs" />
+    <Compile Include="Migrations\Entities\Book.cs" />
     <Compile Include="Models\BooksRepository.cs" />
     <Compile Include="Models\IBooksRepository.cs" />
-    <Compile Include="Models\Image.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -139,12 +146,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Books\Home.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Admin\AddBook.cshtml" />
     <Content Include="Views\Admin\EditBook.cshtml" />
     <Content Include="Views\Admin\DeleteBook.cshtml" />
     <Content Include="Views\Admin\AllBooks.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Books\Home.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

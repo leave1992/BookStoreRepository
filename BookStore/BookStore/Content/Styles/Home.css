@@ -1,0 +1,49 @@
+﻿.book {
+    margin: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 150px;
+    box-shadow: 4px 4px 10px #333;
+}
+
+.book:hover {
+        border: 1px solid #777;
+}
+
+.book img {
+        width: 150px;
+        height: 200px;
+}
+
+.desc {
+    width: 100%;
+    height: 60px;
+    text-align: left;
+}
+
+.desc-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    max-height: 32px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font: bold 12px Helvetica, sans-serif;
+    margin-left:4px;
+    margin-right:2px;
+    margin-top:6px;
+}
+
+.desc-genre {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    max-height: 32px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font: 10px Helvetica, sans-serif;
+    margin-left:4px;
+    margin-top:-4px;
+}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BookStore.Models.Entities;
+using BookStore.Migrations.Entities;
 
 namespace BookStore.Models
 {

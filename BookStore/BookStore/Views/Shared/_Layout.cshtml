@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Styles/Home.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Styles/Layout.css" type="text/css" rel="stylesheet"/>
+    <link href="~/Content/Styles/Header.css" type="text/css" rel="stylesheet"/>
+    <link href="~/Content/Styles/Footer.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="header">
+        <div class="header-bg">
+            <a href="#" class="logo"><img src="~/Resources/Images/logo.png"></a>
+            <ul class="login">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sing Up</a></li>
+            </ul>
+            
+            <input type="text" name="search">
+
+            <nav role='navigation'>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>  
+        </div>
+
+    </div>
+    <div id="content">
+        @RenderBody()
+    </div>
+    <div id="spacer"></div>
+    <hr />
+    <footer class="footer">
+
+        <div class="social">
+            <a href=""><img src="~/Resources/Images/facebook.png" /></a>
+            <a href=""><img src="~/Resources/Images/instagram.png" /></a>
+            <a href=""><img src="~/Resources/Images/twitter.png" /></a>
+            
+            <p>
+                <a href="#">About Us</a>
+                <a href="#">Affiliates</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy</a>
+                <a href="#">Policy</a>
+                <a href="#">Terms of Service</a>
+           </p>
+        </div>
+        <p class="copyright">© @DateTime.Now.Year, Ratio Books Store.</p>
+    </footer>
+</body>
+</html>

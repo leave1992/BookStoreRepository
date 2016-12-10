@@ -1,7 +1,7 @@
-﻿@model BookStore.Models.Entities.Book
+﻿@model BookStore.Migrations.Entities.Book
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>EditBook</title>
+    <title>Edit Book</title>
 </head>
 <body>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
@@ -68,10 +68,10 @@
             </div>
     
             <div>
-                @Html.LabelFor(model => model.BookCover, htmlAttributes: new {})
+                @Html.LabelFor(model => model.Image.Path, htmlAttributes: new {})
                 <div>
-                    @Html.EditorFor(model => model.BookCover, new { htmlAttributes = new {} })
-                    @Html.ValidationMessageFor(model => model.BookCover, "", new {})
+                    @Html.EditorFor(model => model.Image.Path, new { htmlAttributes = new {} })
+                    @Html.ValidationMessageFor(model => model.Image.Path, "", new {})
                 </div>
             </div>
             <hr />
